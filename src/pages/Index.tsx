@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from "react";
+import { BrainCog } from "lucide-react";
+import AssessmentContainer from "@/components/AssessmentContainer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <header className="py-6 border-b">
+        <div className="container flex items-center justify-center">
+          <div className="flex items-center gap-2">
+            <BrainCog className="h-8 w-8 text-genai-primary" />
+            <h1 className="text-2xl font-bold text-gray-800">GenAI Pathfinder</h1>
+          </div>
+        </div>
+      </header>
+      
+      <main className="container">
+        <AssessmentContainer />
+      </main>
+      
+      <footer className="py-6 border-t mt-12 bg-white">
+        <div className="container text-center text-gray-500 text-sm">
+          <p>© {new Date().getFullYear()} GenAI Pathfinder Assessment Tool</p>
+        </div>
+      </footer>
     </div>
   );
 };

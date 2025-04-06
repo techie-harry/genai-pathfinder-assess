@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				genai: {
+					primary: '#8B5CF6',
+					secondary: '#6366F1',
+					accent: '#3B82F6',
+					light: '#E5DEFF',
+					dark: '#4C1D95'
 				}
 			},
 			borderRadius: {
@@ -89,6 +97,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'genai-gradient': 'linear-gradient(to right bottom, #8B5CF6, #6366F1, #3B82F6)'
 			}
 		}
 	},
