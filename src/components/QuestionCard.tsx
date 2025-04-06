@@ -33,6 +33,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ question, currentAnswer, on
           value={currentAnswer !== null ? currentAnswer.toString() : undefined} 
           onValueChange={(value) => onAnswerSelected(parseInt(value))}
           className="space-y-3"
+          key={question.id} // Add key to force re-render when question changes
         >
           {question.options.map((option, index) => (
             <div key={index} className="flex items-start space-x-3 p-3 rounded-md hover:bg-gray-50">

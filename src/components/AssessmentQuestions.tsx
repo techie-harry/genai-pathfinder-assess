@@ -24,6 +24,7 @@ const AssessmentQuestions: React.FC<AssessmentQuestionsProps> = ({
   const isFirstQuestion = currentQuestionIndex === 0;
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
   
+  // Find the answer for the current question only
   const currentAnswer = answers.find(
     answer => answer.questionId === currentQuestion.id
   )?.value ?? null;
