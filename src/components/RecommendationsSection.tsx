@@ -60,7 +60,7 @@ interface RecommendationCardProps {
 }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
-  const { category, title, description, actions, percentage } = recommendation;
+  const { category, title, description, actions = [], percentage } = recommendation;
   const categoryInfo = CATEGORIES[category];
   
   const getPriorityLevel = (percentage: number) => {
@@ -91,7 +91,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
       <CardContent>
         <h4 className="font-medium mb-3">Recommended Actions:</h4>
         <ul className="space-y-2">
-          {actions.map((action, index) => (
+          {actions && actions.map((action, index) => (
             <li key={index} className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-genai-primary flex-shrink-0 mt-0.5" />
               <span className="text-gray-700">{action}</span>
